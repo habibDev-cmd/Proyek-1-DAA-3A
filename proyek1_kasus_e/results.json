@@ -5,62 +5,62 @@
     {
       "n_lines": 500,
       "chars": 84822,
-      "iter_time_s": 0.029744700333329394,
+      "iter_time_s": 0.053708000001885615,
       "iter_ops": 256087,
-      "iter_mem_kb": 3.67578125,
-      "rec_time_s": 0.04325624666663922,
+      "iter_mem_kb": 3.578125,
+      "rec_time_s": 0.07803540000168141,
       "rec_ops": 256087,
-      "rec_mem_kb": 4.203125
+      "rec_mem_kb": 2.6796875
     },
     {
       "n_lines": 1000,
       "chars": 170071,
-      "iter_time_s": 0.058152441666607046,
+      "iter_time_s": 0.11573929999819181,
       "iter_ops": 513200,
-      "iter_mem_kb": 2.55859375,
-      "rec_time_s": 0.08173045900002762,
+      "iter_mem_kb": 2.4296875,
+      "rec_time_s": 0.20035790000110865,
       "rec_ops": 513200,
-      "rec_mem_kb": 3.7265625
+      "rec_mem_kb": 2.171875
     },
     {
       "n_lines": 2000,
       "chars": 343122,
-      "iter_time_s": 0.126328952666654,
+      "iter_time_s": 0.22134383333226046,
       "iter_ops": 1035306,
-      "iter_mem_kb": 2.20703125,
-      "rec_time_s": 0.16377288833329354,
+      "iter_mem_kb": 2.078125,
+      "rec_time_s": 0.268533866663347,
       "rec_ops": 1035306,
-      "rec_mem_kb": 3.40625
+      "rec_mem_kb": 1.8203125
     },
     {
       "n_lines": 3459,
       "chars": 594631,
-      "iter_time_s": 0.21050638566669022,
+      "iter_time_s": 0.31129296666767914,
       "iter_ops": 1794118,
-      "iter_mem_kb": 1.93359375,
-      "rec_time_s": 0.28440072400000344,
+      "iter_mem_kb": 1.7734375,
+      "rec_time_s": 0.4722595333344846,
       "rec_ops": 1794118,
-      "rec_mem_kb": 3.234375
+      "rec_mem_kb": 1.6796875
     },
     {
       "n_lines": 6918,
       "chars": 1189262,
-      "iter_time_s": 0.45535095733331826,
+      "iter_time_s": 0.635522599996572,
       "iter_ops": 3588175,
-      "iter_mem_kb": 1.90234375,
-      "rec_time_s": 0.6042998910000202,
+      "iter_mem_kb": 1.7421875,
+      "rec_time_s": 0.9156027999997605,
       "rec_ops": 3588175,
-      "rec_mem_kb": 3.421875
+      "rec_mem_kb": 1.6796875
     },
     {
       "n_lines": 13836,
       "chars": 2378524,
-      "iter_time_s": 0.8642028243332712,
+      "iter_time_s": 1.2295518999987205,
       "iter_ops": 7176289,
-      "iter_mem_kb": 1.90234375,
-      "rec_time_s": 1.2235127266667025,
+      "iter_mem_kb": 1.7421875,
+      "rec_time_s": 1.8464730000026368,
       "rec_ops": 7176289,
-      "rec_mem_kb": 3.453125
+      "rec_mem_kb": 1.6796875
     }
   ],
   "kmp": {
@@ -69,9 +69,9 @@
       "m": 20,
       "n_lines": 3459,
       "iter_ops": 69199,
-      "iter_time_s": 0.008490772000072866,
+      "iter_time_s": 0.014371400000527501,
       "rec_ops": 69199,
-      "rec_time_s": 0.011500780999995186,
+      "rec_time_s": 0.020401500005391426,
       "rasio_ops_per_N": 0.06781523022721371
     },
     "tanpa_kecocokan": {
@@ -79,9 +79,9 @@
       "m": 20,
       "n_lines": 3459,
       "iter_ops": 1020424,
-      "iter_time_s": 0.11842785100009223,
+      "iter_time_s": 0.17635389999486506,
       "rec_ops": 1020424,
-      "rec_time_s": 0.22954614399998263,
+      "rec_time_s": 0.30605550001200754,
       "rasio_ops_per_N": 1.0000186200577221
     },
     "terburuk": {
@@ -89,9 +89,9 @@
       "m": 20,
       "n_lines": 3459,
       "iter_ops": 1975126,
-      "iter_time_s": 0.2229383679999728,
+      "iter_time_s": 0.36471110000275075,
       "rec_ops": 1975126,
-      "rec_time_s": 0.42614787599995907,
+      "rec_time_s": 0.6584253000037279,
       "rasio_ops_per_N": 1.9356294804513894
     },
     "kedalaman_rekursi_terburuk": 572,
@@ -101,40 +101,40 @@
     "1024": {
       "terbaik (sudah terurut)": {
         "iter_cmp": 5120,
-        "iter_time_s": 0.0017451210001127038,
+        "iter_time_s": 0.002996700000949204,
         "rec_cmp": 5120,
-        "rec_time_s": 0.002737491000061709,
-        "iter_mem_kb": 116.6171875,
-        "rec_mem_kb": 17.21484375,
+        "rec_time_s": 0.004971300004399382,
+        "iter_mem_kb": 116.46875,
+        "rec_mem_kb": 17.0625,
         "rec_max_depth": 11
       },
       "terburuk (selang-seling)": {
         "iter_cmp": 9217,
-        "iter_time_s": 0.0026429210000742387,
+        "iter_time_s": 0.0043043000041507185,
         "rec_cmp": 9217,
-        "rec_time_s": 0.0037567739999531113,
-        "iter_mem_kb": 116.6171875,
-        "rec_mem_kb": 17.19921875,
+        "rec_time_s": 0.007569299996248446,
+        "iter_mem_kb": 116.46875,
+        "rec_mem_kb": 17.015625,
         "rec_max_depth": 11
       }
     },
     "4096": {
       "terbaik (sudah terurut)": {
         "iter_cmp": 24576,
-        "iter_time_s": 0.01014728899997408,
+        "iter_time_s": 0.016879599992535077,
         "rec_cmp": 24576,
-        "rec_time_s": 0.012239972999964266,
-        "iter_mem_kb": 477.9296875,
-        "rec_mem_kb": 69.2109375,
+        "rec_time_s": 0.02539009999600239,
+        "iter_mem_kb": 477.78125,
+        "rec_mem_kb": 68.96875,
         "rec_max_depth": 13
       },
       "terburuk (selang-seling)": {
         "iter_cmp": 45057,
-        "iter_time_s": 0.012351368000054208,
+        "iter_time_s": 0.020358399997348897,
         "rec_cmp": 45057,
-        "rec_time_s": 0.017922296999927312,
-        "iter_mem_kb": 477.9296875,
-        "rec_mem_kb": 69.1875,
+        "rec_time_s": 0.03219199999875855,
+        "iter_mem_kb": 477.78125,
+        "rec_mem_kb": 68.9453125,
         "rec_max_depth": 13
       }
     }
