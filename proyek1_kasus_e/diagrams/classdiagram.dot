@@ -1,0 +1,23 @@
+digraph C {
+  rankdir=TB; dpi=200; nodesep=0.4; ranksep=0.55;
+  node [shape=record, fontname="Helvetica", fontsize=10, style=filled, fillcolor="#FFFFFF", color="#333333"];
+  edge [fontname="Helvetica", fontsize=9, color="#333333"];
+  Pipeline [label="{AnomalyPipeline|- patterns\l- recursive : bool\l- sorted_results\l|+ run(lines)\l+ render() : str\l}"];
+  Loader [label="{LogLoader|- path\l- size_bytes\l|+ load() : list[str]\l}"];
+  Scanner [label="{LogScanner|- matchers\l- results\l- recursive : bool\l|+ scan(lines)\l+ scan_iterative(lines)\l+ scan_recursive(lines)\l- _scan_range(lo, hi)\l}"];
+  KMP [label="{KMPMatcher|- pattern\l- lps : list[int]\l|+ build_lps_iterative()\l+ build_lps_recursive()\l+ search_iterative(text)\l+ search_recursive(text)\l}"];
+  Counter [label="{OperationCounter|+ count : int\l|+ tick(n)\l+ reset()\l}"];
+  Sorter [label="{MergeSorter|+ comparisons : int\l|+ less_equal(a, b)\l+ merge(left, right)\l+ sort_iterative(items)\l+ sort_recursive(items)\l}"];
+  Result [label="{AnomalyResult|+ pattern\l+ order\l+ frequency\l+ first_line\l}"];
+  Report [label="{AnomalyReport||+ render(results, ops, cmp)\l}"];
+  Pipeline -> Scanner [arrowhead=diamond, label="1"];
+  Pipeline -> Sorter [arrowhead=diamond, label="1"];
+  Pipeline -> Report [arrowhead=diamond, label="1"];
+  Pipeline -> Counter [arrowhead=diamond, label="1"];
+  Scanner -> KMP [arrowhead=diamond, label="1..k"];
+  Scanner -> Result [arrowhead=vee, label="1..k"];
+  KMP -> Counter [arrowhead=vee, style=dashed, label="memakai"];
+  Sorter -> Result [arrowhead=vee, style=dashed, label="membandingkan"];
+  Report -> Result [arrowhead=vee, style=dashed, label="menampilkan"];
+  Pipeline -> Loader [arrowhead=vee, style=dashed, label="data dari"];
+}

@@ -1,0 +1,27 @@
+digraph F {
+  rankdir=TB; dpi=200; nodesep=0.35; ranksep=0.32;
+  node [fontname="Helvetica", fontsize=11, style=filled, fillcolor="#FFFFFF", color="#333333"];
+  edge [fontname="Helvetica", fontsize=10, color="#333333"];
+  start [label="Mulai", shape=oval, fillcolor="#DDEBF7"];
+  load  [label="Baca berkas log -> daftar baris\n(LogLoader.load)", shape=box];
+  pats  [label="Tetapkan k pola anomali", shape=box];
+  lps   [label="Bangun tabel LPS tiap pola\n(KMPMatcher.build_lps)", shape=box];
+  init  [label="idx = 0 ; frekuensi = 0 ; indeks_pertama = -1", shape=box];
+  more  [label="idx < jumlah baris ?", shape=diamond, fillcolor="#FFF2CC"];
+  pat   [label="Untuk setiap pola:\nKMP search pada baris[idx]", shape=box];
+  found [label="Pola ditemukan ?", shape=diamond, fillcolor="#FFF2CC"];
+  upd   [label="frekuensi++\nbila belum ada: indeks_pertama = idx+1", shape=box];
+  next  [label="idx++", shape=box];
+  sort  [label="Urutkan hasil dengan Merge Sort\n(frekuensi terkecil dulu, frekuensi 0 di akhir)", shape=box];
+  out   [label="Cetak laporan + metrik\n(operasi dasar)", shape=parallelogram, fillcolor="#E2EFDA"];
+  end   [label="Selesai", shape=oval, fillcolor="#DDEBF7"];
+  start -> load -> pats -> lps -> init -> more;
+  more -> pat [label="Ya"];
+  pat -> found;
+  found -> upd [label="Ya"];
+  found -> next [label="Tidak"];
+  upd -> next;
+  next -> more;
+  more -> sort [label="Tidak"];
+  sort -> out -> end;
+}
